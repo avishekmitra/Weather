@@ -1,95 +1,86 @@
-## 1. Import required external pakages ##
-import math
-import sys
 import datetime
+import sys
 import time
+import math
+from math import log10, exp
 import urllib.request as urllib2
 import numpy as np
-import pandas as pd
 from geopy.geocoders import Nominatim
 geolocator = Nominatim(user_agent="specify_your_app_name_here")
-from math import log10,exp
-##import geocoder
 
 
-## 2. Static URL and Data file location setup from http://www.bom.gov.au/catalogue/anon-ftp.shtml ftp location #
+URL = "ftp://ftp2.bom.gov.au/anon/gen/fwo/IDA00100.dat"
+SITE = "066062"
+SITE_NAME = "Sydney"
 
-dummy_URL       =    "ftp://ftp2.bom.gov.au/anon/gen/fwo/IDA00100.dat"
-dummy_SITE      =    "066062"
-dummy_SITE_NAME =    "Sydney"
-
-
-## 3. Class dataForecast -> Call the ftp location to read data file from server then render and display the weather data##
-
-class dataForecast:
-    data = []
-    service = ""
-    prefix = "%s#%s#" % (dummy_SITE, dummy_SITE_NAME)
-    error = None
-## Get Location Lat/Long from City ##
-def get_Location(city):
-    location = geolocator.geocode(city.replace("\n", ""))
-    return location
-def get_Elevation(Lat,Lon):
-    r = 6376.5 *1000
-    if Lat < 0:
-        Lat=-1*Lat
-    if Lon <0:
-        Lon=-1*Lon
-    ele =   r * math.sin(Lat/10000000) * math.cos(Lon/10000000)
-    return round(ele,1)
-def get_utcTime(date,time):
-    time_s = datetime.datetime.strptime(str(date)+str(time), "%Y%m%d%H%M%S")
+class DateForecast:
+  raw_data = []
+  raw_service = ""
+  raw_prefix = "%s#%s#" % (SITE, SITE_NAME)
+  raw_error = None
+def get_location(_city):
+    _location = geolocator.geocode(_city.replace("\n", ""))
+    return _location
+def get_elevation(_lat, _lon):
+    _r = 6376.5 *1000
+    if _lat < 0:
+        _lat = -1*_lat
+    if _lon < 0:
+        _lon = -1*_lon
+    _ele = _r * math.sin(_lat/10000000) * math.cos(_lon/10000000)
+    return round(_ele, 1)
+def get_utctime(_date, _time):
+    time_s = datetime.datetime.strptime(str(_date)+str(_time), "%Y%m%d%H%M%S")
     return time_s
-def get_airPressure(temp):
+def get_airpressure(w_temp):
     ###Calculation of Air Prssure from Temp###
-    Mw=18.0160 # molecular weight of water
-    Md=28.9660 # molecular weight of dry air
-    R =  8.31432 # gas constant
-    Rd = R/Md # specific gas constant for dry air
-    Rv = R/Mw # specific gas constant for vapour
-    Lv = 2.5# heat release for condensation of water vapour [J kg-1]
-    eps = Mw/Md
-    hPa=611*exp(-float(Lv)/Rv*(1/float(temp) - 1/273.16))
-    return str(round(hPa,1))
-def get_relativeHumidity(T):
-    L = 2.453 * log10(6) ##Latent heat of vaporization
-    Rv = 461 ## Gas content
-    Es = (L/Rv )*(1/273 - 1/float(T))*6.11*(-1000) ##Saturation vapor pressure
-    Es_percent=round(Es*100,1)
-    return Es_percent
+    ap_mw = 18.0160 # molecular weight of water
+    ap_md = 28.9660 # molecular weight of dry air
+    ap_r = 8.31432 # gas constant
+    ap_rd = ap_r/ap_md # specific gas constant for dry air
+    ap_rv = ap_r/ap_mw # specific gas constant for vapour
+    ap_lv = 2.5 # heat release for condensation of water vapour [J kg-1]
+    ap_eps = ap_mw/ap_md
+    ap_hpa = 611*exp(-float(ap_lv)/ap_rv*(1/float(w_temp) - 1/273.16))
+    return str(round(ap_hpa, 1))
+def get_relativehumidity(w_temp):
+    rh_l = 2.453 * log10(6) ##Latent heat of vaporization
+    rh_rv = 461 ## Gas content
+    rh_es = (rh_l/rh_rv)*(1/273 - 1/float(w_temp))*6.11*(-1000) ##Saturation vapor pressure
+    es_percent = round(rh_es*100, 1)
+    return es_percent
 
-def process_Data(dataStream):
-    cols=dataStream
-    _City= []
-    _Date= []
-    _Conditions= []
-    _Temp= []
-    _Pos= []
-    _Airpressure=[]
-    _RelativeHumidity=[]
+def process_wdata(data_stream):
+    cols = data_stream
+    w_city = []
+    w_date = []
+    w_conditions = []
+    w_temp = []
+    w_pos = []
+    w_airpressure = []
+    w_relativehumidity = []
     ##################### List for Output################
-    i= 0
+    i = 0
     while i < len(cols)-1:
-        _City.append(cols[i].replace('\n',""))
+        w_city.append(cols[i].replace('\n', ""))
         ##g = geocoder.google([45.15, -75.14], method='elevation')
-        _Pos.append(str(round(get_Location(cols[i]).latitude,2))+","+str(round(get_Location(cols[i]).longitude,2))+","+str(get_Elevation(get_Location(cols[i]).latitude,get_Location(cols[i]).longitude)))
-        _Date.append(str(datetime.datetime.fromtimestamp(time.mktime(time.localtime(time.mktime(get_utcTime(cols[i+2],cols[i+3]).timetuple()))))))
-        _Conditions.append(cols[i+7])
-        _Temp.append(cols[i+6])
-        _Airpressure.append(get_airPressure(cols[i+6]))
-        _RelativeHumidity.append(get_relativeHumidity(cols[i+6]))
+        w_pos.append(str(round(get_location(cols[i]).latitude, 2))+","+str(round(get_location(cols[i]).longitude, 2))+","+str(get_elevation(get_location(cols[i]).latitude, get_location(cols[i]).longitude)))
+        w_date.append(str(datetime.datetime.fromtimestamp(time.mktime(time.localtime(time.mktime(get_utctime(cols[i+2], cols[i+3]).timetuple()))))))
+        w_conditions.append(cols[i+7])
+        w_temp.append(cols[i+6])
+        w_airpressure.append(get_airpressure(cols[i+6]))
+        w_relativehumidity.append(get_relativehumidity(cols[i+6]))
         ##### End ####
         i += 8
 
     ### Storing All list into Array ###
-    a=np.array([_City,_Pos,_Date,_Conditions,_Temp,_Airpressure,_RelativeHumidity]).transpose()
-    return a
+    w_a = np.array([w_city, w_pos, w_date, w_conditions, w_temp, w_airpressure, w_relativehumidity]).transpose()
+    return w_a
 
-def weather_Output():
+def weather_output():
     try:
-        ftp_Request = urllib2.urlopen(dummy_URL)
-        ftp_Read=ftp_Request.read().decode('utf-8')[77:]
+        ftp_request = urllib2.urlopen(URL)
+        ftp_read = ftp_request.read().decode('utf-8')[77:]
     except OSError as err:
         print("OS error: {0}".format(err))
         exit(1)
@@ -99,7 +90,7 @@ def weather_Output():
     except:
         print("Unexpected error:", sys.exc_info()[0])
         exit(1)
-    else :
-        out=process_Data(ftp_Read.split("#"))
-        return out
-print(np.savetxt(sys.stdout.buffer, weather_Output(), fmt='%s', delimiter='|'))
+    else:
+        _out = process_wdata(ftp_read.split("#"))
+        return _out
+print(np.savetxt(sys.stdout.buffer, weather_output(), fmt='%s', delimiter='|'))
