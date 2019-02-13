@@ -1,0 +1,6 @@
+You are using pip version 10.0.1, however version 19.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+a5074534/unittest_xml_reporting-2.2.1-py2.py3-none-any.whl
+Requirement already satisfied: six>=1.4.0 in /home/amitra/environments/my_env/lib/python3.6/site-packages (from unittest-xml-reporting) (1.12.0)
+Installing collected packages: unittest-xml-reporting
+Successfully installed unittest-xml-reporting-2.2.1
