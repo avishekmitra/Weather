@@ -1,10 +1,23 @@
 
 Running tests...
 ----------------------------------------------------------------------
+E
+======================================================================
+ERROR [0.001s]: core_tests (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: core_tests
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/loader.py", line 153, in loadTestsFromName
+    module = __import__(module_name)
+  File "/home/amitra/environments/Weather/src/unittest/python/core_tests.py", line 5, in <module>
+    from myproject import greet
+ModuleNotFoundError: No module named 'myproject'
+
 
 ----------------------------------------------------------------------
-Ran 0 tests in 0.000s
+Ran 1 test in 0.001s
 
-OK
+FAILED (errors=1)
 
 Generating XML reports...
+Generated XML report: /home/amitra/environments/Weather/target/reports/TEST-unittest.loader._FailedTest-20190214080108.xml

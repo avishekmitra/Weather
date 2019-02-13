@@ -1,0 +1,10 @@
+core.py
+helpers.py
+loghelpers.py
+setup.py
+Weather.egg-info/PKG-INFO
+Weather.egg-info/SOURCES.txt
+Weather.egg-info/dependency_links.txt
+Weather.egg-info/namespace_packages.txt
+Weather.egg-info/top_level.txt
+Weather.egg-info/zip-safe

@@ -11,15 +11,15 @@ from loghelpers import loginfo
 def main():
     loginfo("---------")
     loginfo("Data generation started")
-    observation = int(sys.argv[1])
-    if observation < 1:
-        raise ValueError("Number of observations cannot be less than 1")
+    #observation = int(sys.argv[1])
+    #if observation < 1:
+       # raise ValueError("Number of observations cannot be less than 1")
     loginfo("tif file reading start")
     longs, lats = getrasterdata(getdatafile('cea.tif'))
     loginfo("output file writing start")
     weather_file = open(getoutputdir("weather_data.dat"), "w")
     rotation_i = 0
-    for rotation_i in range(observation):
+    for rotation_i in range(10):
         s_long = longs[rotation_i]
         s_lats = lats[rotation_i]
         iata_lats = round(s_lats[rotation_i], 2) + rotation_i

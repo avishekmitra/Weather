@@ -1,0 +1,42 @@
+running clean
+'build/lib' does not exist -- can't clean it
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.6' does not exist -- can't clean it
+running bdist_wheel
+running build
+running build_py
+creating build
+creating build/lib
+copying core.py -> build/lib
+copying helpers.py -> build/lib
+copying loghelpers.py -> build/lib
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/wheel
+copying build/lib/core.py -> build/bdist.linux-x86_64/wheel
+copying build/lib/helpers.py -> build/bdist.linux-x86_64/wheel
+copying build/lib/loghelpers.py -> build/bdist.linux-x86_64/wheel
+running install_egg_info
+running egg_info
+writing Weather.egg-info/PKG-INFO
+writing dependency_links to Weather.egg-info/dependency_links.txt
+writing namespace_packages to Weather.egg-info/namespace_packages.txt
+writing top-level names to Weather.egg-info/top_level.txt
+reading manifest file 'Weather.egg-info/SOURCES.txt'
+writing manifest file 'Weather.egg-info/SOURCES.txt'
+Copying Weather.egg-info to build/bdist.linux-x86_64/wheel/Weather-1.0-py3.6.egg-info
+running install_scripts
+creating build/bdist.linux-x86_64/wheel/Weather-1.0.dist-info/WHEEL
+creating 'dist/Weather-1.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'core.py'
+adding 'helpers.py'
+adding 'loghelpers.py'
+adding 'Weather-1.0.dist-info/METADATA'
+adding 'Weather-1.0.dist-info/WHEEL'
+adding 'Weather-1.0.dist-info/namespace_packages.txt'
+adding 'Weather-1.0.dist-info/top_level.txt'
+adding 'Weather-1.0.dist-info/zip-safe'
+adding 'Weather-1.0.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel

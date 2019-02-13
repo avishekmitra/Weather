@@ -1,0 +1,38 @@
+running clean
+'build/lib' does not exist -- can't clean it
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.6' does not exist -- can't clean it
+running sdist
+running egg_info
+creating Weather.egg-info
+writing Weather.egg-info/PKG-INFO
+writing dependency_links to Weather.egg-info/dependency_links.txt
+writing namespace_packages to Weather.egg-info/namespace_packages.txt
+writing top-level names to Weather.egg-info/top_level.txt
+writing manifest file 'Weather.egg-info/SOURCES.txt'
+reading manifest file 'Weather.egg-info/SOURCES.txt'
+writing manifest file 'Weather.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+warning: check: missing required meta-data: url
+
+warning: check: missing meta-data: either (author and author_email) or (maintainer and maintainer_email) must be supplied
+
+creating Weather-1.0
+creating Weather-1.0/Weather.egg-info
+copying files to Weather-1.0...
+copying core.py -> Weather-1.0
+copying helpers.py -> Weather-1.0
+copying loghelpers.py -> Weather-1.0
+copying setup.py -> Weather-1.0
+copying Weather.egg-info/PKG-INFO -> Weather-1.0/Weather.egg-info
+copying Weather.egg-info/SOURCES.txt -> Weather-1.0/Weather.egg-info
+copying Weather.egg-info/dependency_links.txt -> Weather-1.0/Weather.egg-info
+copying Weather.egg-info/namespace_packages.txt -> Weather-1.0/Weather.egg-info
+copying Weather.egg-info/top_level.txt -> Weather-1.0/Weather.egg-info
+copying Weather.egg-info/zip-safe -> Weather-1.0/Weather.egg-info
+Writing Weather-1.0/setup.cfg
+creating dist
+Creating tar archive
+removing 'Weather-1.0' (and everything under it)

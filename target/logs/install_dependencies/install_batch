@@ -1,0 +1,7 @@
+Collecting mock
+  Downloading https://files.pythonhosted.org/packages/e6/35/f187bdf23be87092bd0f1200d43d23076cee4d0dec109f195173fd3ebc79/mock-2.0.0-py2.py3-none-any.whl (56kB)
+Requirement not upgraded as not directly required: six>=1.9 in /home/amitra/environments/my_env/lib/python3.6/site-packages (from mock) (1.12.0)
+Collecting pbr>=0.11 (from mock)
+  Downloading https://files.pythonhosted.org/packages/8c/7f/fed53b379500fd889707d1f6e61c2a35e12f2de87396894aff89b017d1d6/pbr-5.1.2-py2.py3-none-any.whl (107kB)
+Installing collected packages: pbr, mock
+Successfully installed mock-2.0.0 pbr-5.1.2
