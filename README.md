@@ -37,7 +37,14 @@ where
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+
+    ## 1. Sotuion environment
+          OS : Windows 10
+          Solution platform : Ubuntu 18.04 on windows 10 (please refer Ubuntu 18.04 on windows 10 set up document to set up environment)
+          Language Used : (my_env) amitra@AU2148238W1:~/environments$ python -V
+                                                                      Python 3.6.7
+          Additional pakages : please see git Weather/requirements.txt
 
 ### Prerequisites
 
@@ -48,8 +55,14 @@ e.g - > 8GB Ram should process < 1 MB files very quickly.
 
 ```
 Please find the steps needed to be follow before executing the project :
-1. A static .tif file to be placed in data folder (for this project) -> 
-2. A static ' 2018-12-21 UN/LOCODE by Country version 2018-2' file has been created from exporting ms_access db to .txt file  
+  1. A static 'cea.tif file to be placed in data folder (for this project) -> 
+  2. A static '2018-12-21 UN/LOCODE by Country version 2018-2' file has been created from exporting ms_access db to .txt file  
+
+~/environments/Weather/src/main/data$ ll
+ -rwxrwxrwx 1 amitra amitra 2781761 Feb 14 14:34 UNLOCODE.txt*
+ -rwxrwxrwx 1 amitra amitra  270993 Feb 13 17:23 cea.tif*
+
+ *Note you might have to change file permission depending on your env setup using -> chmod
 
 
 ### Installing
@@ -110,9 +123,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Avishek Mitra** - *Initial work* - amitraa2012@gmail.com
 
 ## License
 
