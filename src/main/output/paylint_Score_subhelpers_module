@@ -1,0 +1,7 @@
+************* Module subhelpers
+W: 24,16: Unreachable code (unreachable)
+R: 15, 0: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+
+------------------------------------------------------------------
+Your code has been rated at 9.00/10 (previous run: 9.00/10, +0.00)
+

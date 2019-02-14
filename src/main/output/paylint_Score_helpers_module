@@ -1,0 +1,19 @@
+************* Module helpers
+C: 14, 0: Exactly one space required after comma
+from subhelpers import getcityname,getdatafile,getstrtime
+                                  ^ (bad-whitespace)
+C: 14, 0: Exactly one space required after comma
+from subhelpers import getcityname,getdatafile,getstrtime
+                                              ^ (bad-whitespace)
+E:  7, 0: Unable to import 'numpy' (import-error)
+E:  8, 0: Unable to import 'affine' (import-error)
+E:  9, 0: Unable to import 'pyproj' (import-error)
+E: 10, 0: Unable to import 'rasterio' (import-error)
+E: 11, 0: Unable to import 'rasterio.features' (import-error)
+E: 12, 0: Unable to import 'rasterio.warp' (import-error)
+E: 13, 0: Unable to import 'requests' (import-error)
+W:  3, 0: Unused import time (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 3.21/10 (previous run: 4.44/10, -1.23)
+
