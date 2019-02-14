@@ -1,4 +1,4 @@
-# Project Title
+# Project : Dummy Weather Data for Toy Simulation (using pyhton, pyb)
 
 This project involves plan, scope and supporting documents (as per SDLC) to create a toy simulation of the environment 
 (taking into account things like atmosphere, topography, geography, oceanography, or similar) that evolves over time. 
@@ -41,18 +41,18 @@ where
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-    ## 1. Sotuion environment
+## 1. Sotuion environment
           OS : Windows 10
           Solution platform : Ubuntu 18.04 on windows 10 (please refer Ubuntu 18.04 on windows 10 set up document to set up environment)
           Language Used : (my_env) amitra@AU2148238W1:~/environments$ python -V
                                                                       Python 3.6.7
           Software installation : python, pip, pyb -> Please see respective information from web
           Additional pakages : please see git Weather/requirements.txt
-    
-     ## 2. Directory Tree
+
+## 2. Directory Tree
           A file system directory structure gives an idea about how the file and folder has been structured within project environment
 
----------------------Dir Structure : Weather ----------------
+          ---------------------Dir Structure : Weather ----------------
 Weather
 ├ LICENSE
 ├ README.md
@@ -115,7 +115,8 @@ Weather
     │       └ install_batch.err
     └ reports
 -----------------------------------------------------------
-       ## 3. Code Structure (execution) :
+
+## 3. Code Structure (execution) :
           
           The code structure is simpele and follows below dependencies :
  
@@ -124,7 +125,7 @@ Weather
                                 -> loghelpers.py
           Description : core.py module is the main function which calls helper.py to prepare the data, then the helpers.py calls both subhelpers.py, loghelpers.py to
                         populate data and logs the excution time.  
-       ## 4. Output:
+## 4. Output:
              Once the project executed the output file will be created on Weather->src->main->output 
              The folder consists :
              paylint_score_core_Module (Code standard score for core module)
