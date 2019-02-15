@@ -5,11 +5,7 @@ This project involves plan, scope and supporting documents (as per SDLC) to crea
 Then take measurements at various locations and times, and have your program emit that data, as in the following:
 
 
-Location	Position	        Local Time	       Conditions	Temperature	Pressure	Humidity
-						
-Sydney	        -33.86,151.21,39	2015-12-23 16:02:12	Rain	        +12.5	        1010.3	        97
-Melbourne	-37.83,144.98,7	        2015-12-25 02:30:55	Snow	        -5.3	        998.4	        55
-Adelaide	-34.92,138.62,48	2016-01-04 23:05:37	Sunny	        +39.4	        1114.1	        12
+Location|Position|Local Time|Conditions|Temperature|Pressure|Humidity
 						
 
 Output of the data will be in the following format:
@@ -52,69 +48,35 @@ These instructions will get you a copy of the project up and running on your loc
 ## 2. Directory Tree
           A file system directory structure gives an idea about how the file and folder has been structured within project environment
 
-          ---------------------Dir Structure : Weather ----------------
-Weather
-├ LICENSE
-├ README.md
-├ __init__.py
-├ build.py
-├ requirements.txt
-├ setup.py
-├ src
-│   ├ main
-│   │   ├ data
-│   │   │   ├ UNLOCODE.txt
-│   │   │   └ cea.tif
-│   │   ├ output
-│   │   │   ├ paylint_Score_Core_Module
-│   │   │   ├ paylint_Score_helpers_module
-│   │   │   ├ paylint_Score_loghelpers_module
-│   │   │   ├ paylint_Score_subhelpers_module
-│   │   │   ├ weather_data.dat
-│   │   │   └ weather_data.log
-│   │   ├ python
-│   │   │   ├ core.py
-│   │   │   ├ helpers.py
-│   │   │   ├ loghelpers.py
-│   │   │   └ subhelpers.py
-│   │   └ scripts
-│   └ unittest
-│       └ python
-│           ├ __pycache__
-│           │   └ core_tests.cpython-36.pyc
-│           └ core_tests.py
-└ target
-    ├ dist
-    │   └ Weather-1.0
-    │       ├ Weather.egg-info
-    │       │   ├ PKG-INFO
-    │       │   ├ SOURCES.txt
-    │       │   ├ dependency_links.txt
-    │       │   ├ namespace_packages.txt
-    │       │   ├ top_level.txt
-    │       │   └ zip-safe
-    │       ├ __pycache__
-    │       ├ build
-    │       │   ├ bdist.linux-x86_64
-    │       │   └ lib
-    │       │       ├ core.py
-    │       │       ├ helpers.py
-    │       │       └ loghelpers.py
-    │       ├ core.py
-    │       ├ dist
-    │       │   ├ Weather-1.0-py3-none-any.whl
-    │       │   └ Weather-1.0.tar.gz
-    │       ├ helpers.py
-    │       ├ loghelpers.py
-    │       ├ scripts
-    │       └ setup.py
-    ├ install_dependencies_constraints
-    ├ logs
-    │   └ install_dependencies
-    │       ├ install_batch
-    │       └ install_batch.err
-    └ reports
------------------------------------------------------------
+          
+         ## ---------------------Dir Structure : Weather ----------------
+          Weather
+            ├ LICENSE
+            ├ README.md
+            ├ __init__.py
+            ├ build.py
+            ├ requirements.txt
+            ├ setup.py
+            ├ src
+            │   ├ main
+            │   │   ├ data
+            │   │   │   ├ UNLOCODE.txt
+            │   │   │   └ cea.tif
+            │   │   ├ output
+            │   │   │   ├ paylint_Score_Core_Module
+            │   │   │   ├ paylint_Score_helpers_module
+            │   │   │   ├ paylint_Score_loghelpers_module
+            │   │   │   ├ paylint_Score_subhelpers_module
+            │   │   │   ├ weather_data.dat
+            │   │   │   └ weather_data.log
+            │   │   ├ python
+            │   │   │   ├ core.py
+            │   │   │   ├ helpers.py
+            │   │   │   ├ loghelpers.py
+            │   │   │   └ subhelpers.py
+            │   │   └ scripts
+            │   └ unittest
+          
 
 ## 3. Code Structure (execution) :
           
