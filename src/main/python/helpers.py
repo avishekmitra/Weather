@@ -13,7 +13,7 @@ import rasterio.warp
 import requests
 from subhelpers import getcityname, getdatafile, getstrtime
 
-iataurl = 'http://iatageo.com/getCode/'
+IATAURL = 'http://iatageo.com/getCode/'
 
 CONDITIONS = {"Sunny": {"temperature": (40, 30), "pressure": (1200, 700), "humidity": (70, 55)},
               "Rain": {"temperature": (22, 15), "pressure": (1500, 700), "humidity": (90, 75)},
@@ -24,9 +24,9 @@ def getiatageo(latitude, longitude):
         IATA website'''
     iatageo = ''
     try:
-        iatageo = requests.get(iataurl + str(latitude) + '/' + str(longitude)).json()['IATA']
+        iatageo = requests.get(IATAURL + str(latitude) + '/' + str(longitude)).json()['IATA']
         geocity = getcityname(str(iatageo))
-    except:
+    except IOError:
         print('Failed to open url.')
         sys.exit(1)
     return geocity

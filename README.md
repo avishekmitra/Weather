@@ -87,10 +87,21 @@ A sample file system directory structure gives an idea about how the file and fo
           Description : core.py module is the main functio/module which calls helpers.py to prepare the data, and loghelpers.py to create execution log.  
                         Then the helpers.py calls subhelpers.py module which helpes helpers.py to populate weather data.  
 ## 4. Output:
+        
           Once the project executed the output file will be created on Weather->src->main->output 
+          -> Makefile has been created on /Weather/src/main/pyhton/ with args for test execution
+    
           The outout folder (Weather/src/main/output/ consists:
           1. weather_data.dat (Final output dependent on numer of weather iterations)
           2. weather_data.log (Code execution log)
+          
+
+          Sample output :
+          Ontario|33.94,-117.64,100.52|2018-06-12 05:05:19|Snow|-1.7|1027.3|62.1
+          Daggett|34.94,-116.64,101.52|2018-03-29 09:43:46|Snow|-2.1|1150.8|61.6
+          Las Vegas|35.94,-115.64,102.52|2018-12-12 07:36:03|Sunny|31.8|778.5|63.0
+          Leesville|36.94,-114.64,103.52|2018-06-15 14:09:21|Snow|-4.6|863.5|55.3
+          Cedar City|37.94,-113.64,104.52|2018-06-15 16:25:39|Sunny|38.5|718.5|65.0
 
 ### Prerequisites
 
@@ -101,9 +112,12 @@ This project is capable to process .tif* files to generate random weather data, 
 
           ```
           P.S: The weather data cities are currently defaulted to 'US' as country, we can make it dynamic by capturing localisation variable.
-    ##   Please find the steps needed to be follow before executing the project :
+         
+
+          ##   Please find the steps needed to be follow before executing the project :
           1. A static 'weather.tif file to be placed in data folder (for this project). 
           2. A static '2018-12-21 UN/LOCODE by Country version 2018-2' file has been created from exporting ms_access db to .txt file.  
+          3. Assumption weather.tif file holds 'US' geospatial data.
 
           Data folder Git location: Weather/src/main/data
           UNLOCODE.txt*
