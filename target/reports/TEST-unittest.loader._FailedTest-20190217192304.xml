@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="2" failures="0" name="unittest.loader._FailedTest-20190217192304" skipped="0" tests="2" time="0.001" timestamp="2019-02-17T19:23:04">
+	<testcase classname="unittest.loader._FailedTest" name="Weather_tests" time="0.001" timestamp="2019-02-17T19:23:04">
+		<error message="Failed to import test module: Weather_tests
+Traceback (most recent call last):
+  File &quot;/usr/lib/python3.6/unittest/loader.py&quot;, line 153, in loadTestsFromName
+    module = __import__(module_name)
+  File &quot;/home/amitra/environments/Weather/src/unittest/python/Weather_tests.py&quot;, line 3, in &lt;module&gt;
+    from Weather import weather
+ModuleNotFoundError: No module named 'Weather'
+" type="ImportError">
+<![CDATA[ImportError: Failed to import test module: Weather_tests
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/loader.py", line 153, in loadTestsFromName
+    module = __import__(module_name)
+  File "/home/amitra/environments/Weather/src/unittest/python/Weather_tests.py", line 3, in <module>
+    from Weather import weather
+ModuleNotFoundError: No module named 'Weather'
+
+]]>		</error>
+	</testcase>
+	<testcase classname="unittest.loader._FailedTest" name="subhelpers_tests" time="0.000" timestamp="2019-02-17T19:23:04">
+		<error message="Failed to import test module: subhelpers_tests
+Traceback (most recent call last):
+  File &quot;/usr/lib/python3.6/unittest/loader.py&quot;, line 153, in loadTestsFromName
+    module = __import__(module_name)
+  File &quot;/home/amitra/environments/Weather/src/unittest/python/subhelpers_tests.py&quot;, line 4, in &lt;module&gt;
+    from python import subhelpers
+ModuleNotFoundError: No module named 'python'
+" type="ImportError">
+<![CDATA[ImportError: Failed to import test module: subhelpers_tests
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/unittest/loader.py", line 153, in loadTestsFromName
+    module = __import__(module_name)
+  File "/home/amitra/environments/Weather/src/unittest/python/subhelpers_tests.py", line 4, in <module>
+    from python import subhelpers
+ModuleNotFoundError: No module named 'python'
+
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

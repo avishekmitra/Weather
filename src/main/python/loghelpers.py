@@ -7,6 +7,7 @@ def loginfo(source):
        args- string message as source
     '''
     log_file = getoutputdir("weather_data.log")
-    log_df = "%Y-%m-%d-%H-%M-%S"
-    logging.basicConfig(level=logging.INFO, filename=log_file, filemode='w', datefmt=log_df)
+    frmt = '%(asctime)s %(message)s'
+    logging.basicConfig(level=logging.INFO, format=frmt, filename=log_file, filemode='w')
     logging.info(source)
+

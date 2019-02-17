@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" name="subhelpers_tests.MyTest-20190217213235" skipped="0" tests="1" time="0.180" timestamp="2019-02-17T21:32:35">
+	<testcase classname="subhelpers_tests.MyTest" name="test_cityname" time="0.180" timestamp="2019-02-17T21:32:35">
+		<failure message="'Las Vegas' != 'Las Vegus'
+- Las Vegas
+?        ^
++ Las Vegus
+?        ^
+" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/amitra/environments/Weather/src/unittest/python/subhelpers_tests.py", line 11, in test_cityname
+    self.assertEqual(getcityname('LAS'), 'Las Vegus')
+AssertionError: 'Las Vegas' != 'Las Vegus'
+- Las Vegas
+?        ^
++ Las Vegus
+?        ^
+
+]]>		</failure>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

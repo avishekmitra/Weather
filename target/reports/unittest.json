@@ -1,10 +1,5 @@
 {
-  "errors": [
-    {
-      "test": "unittest.loader._FailedTest.core_tests",
-      "traceback": "ImportError: Failed to import test module: core_tests\nTraceback (most recent call last):\n  File \"/usr/lib/python3.6/unittest/loader.py\", line 153, in loadTestsFromName\n    module = __import__(module_name)\n  File \"/home/amitra/environments/Weather/src/unittest/python/core_tests.py\", line 5, in <module>\n    from myproject import greet\nModuleNotFoundError: No module named 'myproject'\n\n"
-    }
-  ],
+  "errors": [],
   "failures": [],
-  "tests-run": 1
+  "tests-run": 2
 }

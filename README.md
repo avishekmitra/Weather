@@ -39,14 +39,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## 1. Sotuion environment
           OS : Windows 10
-          Solution platform : Ubuntu 18.04 on windows 10 (please refer Ubuntu 18.04 on windows 10 set up document to set up environment)
-          Language Used : (my_env) amitra@AU2148238W1:~/environments$ python -V
-                                                                      Python 3.6.7
+          Solution platform : Ubuntu 18.04 on windows 10 (please refer Ubuntu 18.04 on 
+                              windows 10 set up document to set up environment)
+          Language Used : Python 3.6.7
           Software installation : python, pip, pyb -> Please see respective information from web
           Additional pakages : please see git Weather/requirements.txt
 
 ## 2. Directory Tree
-          A file system directory structure gives an idea about how the file and folder has been structured within project environment
+          
+A sample file system directory structure gives an idea about how the file and folder has been structured within project environment.
 
           
          ## ---------------------Dir Structure : Weather ----------------
@@ -63,10 +64,7 @@ These instructions will get you a copy of the project up and running on your loc
             │   │   │   ├ UNLOCODE.txt
             │   │   │   └ cea.tif
             │   │   ├ output
-            │   │   │   ├ paylint_Score_Core_Module
-            │   │   │   ├ paylint_Score_helpers_module
-            │   │   │   ├ paylint_Score_loghelpers_module
-            │   │   │   ├ paylint_Score_subhelpers_module
+            │   │   │       
             │   │   │   ├ weather_data.dat
             │   │   │   └ weather_data.log
             │   │   ├ python
@@ -83,56 +81,51 @@ These instructions will get you a copy of the project up and running on your loc
           The code structure is simpele and follows below dependencies :
  
           core.py -> helpers.py -> subhelpers.py
-                                |
-                                -> loghelpers.py
-          Description : core.py module is the main function which calls helper.py to prepare the data, then the helpers.py calls both subhelpers.py, loghelpers.py to
-                        populate data and logs the excution time.  
+                   | 
+                   |-> loghelpers.py
+
+          Description : core.py module is the main functio/module which calls helpers.py to prepare the data, and loghelpers.py to create execution log.  
+                        Then the helpers.py calls subhelpers.py module which helpes helpers.py to populate weather data.  
 ## 4. Output:
-             Once the project executed the output file will be created on Weather->src->main->output 
-             The folder consists :
-             paylint_score_core_Module (Code standard score for core module)
-             paylint_Score_helpers_module (Code standard score for helpers module)
-             paylint_Score_loghelpers_module (Code standard score for loghelpers module)
-             paylint_Score_subhelpers_module (Code standard score for subhelpers module)
-             weather_data.dat (Final Output depending iterations)
-             weather_data.log (Code execution log)
+          Once the project executed the output file will be created on Weather->src->main->output 
+          The outout folder (Weather/src/main/output/ consists:
+          1. weather_data.dat (Final Output depending iterations)
+          2. weather_data.log (Code execution log)
 
 ### Prerequisites
 
 This project is capable to process .tif* files to generate random weather data, but for high resolution .tif* file processing it requires more processing power.
 
-```
-e.g - > 8GB Ram should process < 1 MB files very quickly.
+          ```
+          e.g - > 8GB Ram should process < 1 MB files very quickly.
 
-```
+          ```
+          P.S: The weather data cities are currently defaulted to 'US' as country, we can make it dynamic by capturing localisation variable.
     ##   Please find the steps needed to be follow before executing the project :
-          1. A static 'cea.tif file to be placed in data folder (for this project) -> 
-          2. A static '2018-12-21 UN/LOCODE by Country version 2018-2' file has been created from exporting ms_access db to .txt file  
+          1. A static 'weather.tif file to be placed in data folder (for this project). 
+          2. A static '2018-12-21 UN/LOCODE by Country version 2018-2' file has been created from exporting ms_access db to .txt file.  
 
-          Git location: Weather/src/main/data
+          Source files Git location: Weather/src/main/data
           UNLOCODE.txt*
-          cea.tif*
+          weather.tif*
 
- *Note you might have to change file permission depending on your env setup using -> chmod
+          *Note: We can use any .tif file which stores weather data but you have to rename it to weather.tif and place to data folder.
+          you might have to change file permission depending on your env setup. use chmod for unix/linux
 
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of installation to get the dev environment build : 
 
-Say what the step will be
+           Steps:
+             1. Install Ubuntu 18.04 on windows 10 (url: )
+             2. Install python 
+             3. Install pip
+             5. Install pylint
+             6. Install Py builder (http://pybuilder.github.io/)
+             7. Install external pakages (refer : requirements.txt) 
 
-```
-Give the example
-```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -148,21 +141,24 @@ Give an example
 
 ### And coding style tests
 
-Explain what these tests test and why
+pylint has been used to check coding style ->
 
-```
-Give an example
-```
+Below are the scores : 
+          # Command line : pylint <yourcode.py>
+          #Location(git) -> Weather/src/main/codestandard
+            paylint_score_core_Module (Code standard score for core module)
+            paylint_Score_helpers_module (Code standard score for helpers module)
+            paylint_Score_loghelpers_module (Code standard score for loghelpers module)
+            paylint_Score_subhelpers_module (Code standard score for subhelpers module)
+
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+ 
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+*  Py builder
 
 ## Contributing
 
@@ -182,9 +178,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* pyhton community
+* who have had used their brain to generate weather data
+* raster process community
 
 
 

@@ -1,6 +1,6 @@
-INFO:root:---------
-INFO:root:Data generation started
-INFO:root:tif file reading start
-INFO:root:output file writing start
-INFO:root:Program End!
-INFO:root:----------
+2019-02-17 22:15:00,036 ---------
+2019-02-17 22:15:00,036 Data generation started
+2019-02-17 22:15:00,037 tif file reading start
+2019-02-17 22:15:00,573 output file writing start
+2019-02-17 22:15:12,065 Program End!
+2019-02-17 22:15:12,065 ----------

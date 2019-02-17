@@ -1,7 +1,9 @@
-Collecting mock
-  Downloading https://files.pythonhosted.org/packages/e6/35/f187bdf23be87092bd0f1200d43d23076cee4d0dec109f195173fd3ebc79/mock-2.0.0-py2.py3-none-any.whl (56kB)
-Requirement not upgraded as not directly required: six>=1.9 in /home/amitra/environments/my_env/lib/python3.6/site-packages (from mock) (1.12.0)
-Collecting pbr>=0.11 (from mock)
-  Downloading https://files.pythonhosted.org/packages/8c/7f/fed53b379500fd889707d1f6e61c2a35e12f2de87396894aff89b017d1d6/pbr-5.1.2-py2.py3-none-any.whl (107kB)
-Installing collected packages: pbr, mock
-Successfully installed mock-2.0.0 pbr-5.1.2
+Collecting mockito
+  Downloading https://files.pythonhosted.org/packages/0b/65/5a24a309e993c6a6f5b58e4a28cc77c972a40bd89ce98f7f39461a71aa70/mockito-1.1.1.tar.gz
+Building wheels for collected packages: mockito
+  Building wheel for mockito (setup.py): started
+  Building wheel for mockito (setup.py): finished with status 'done'
+  Stored in directory: /home/amitra/.cache/pip/wheels/3f/34/72/2bb69cfbac281c755461dce247d3d3675646e71d9566e5156d
+Successfully built mockito
+Installing collected packages: mockito
+Successfully installed mockito-1.1.1

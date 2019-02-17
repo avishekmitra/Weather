@@ -1,0 +1,7 @@
+============================= test session starts ==============================
+platform linux -- Python 3.6.7, pytest-4.2.1, py-1.7.0, pluggy-0.8.1
+rootdir: /home/amitra/environments/Weather, inifile: pytest.ini
+plugins: pythonpath-0.7.3
+collected 0 items
+
+========================= no tests ran in 0.01 seconds =========================

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="subhelpers_tests.MyTest-20190217213728" skipped="0" tests="1" time="0.205" timestamp="2019-02-17T21:37:28">
+	<testcase classname="subhelpers_tests.MyTest" name="test_cityname" time="0.205" timestamp="2019-02-17T21:37:28"/>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

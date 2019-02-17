@@ -21,19 +21,21 @@ if __name__ == '__main__':
     setup(
         name = 'Weather',
         version = '1.0',
-        description = '',
+        description = 'Weather PyBuilder / Git project',
         long_description = '',
         author = '',
         author_email = '',
         license = '',
-        url = '',
-        scripts = [],
+        url = 'https://github.com/avishekmitra/Weather.git',
+        scripts = ['scripts/weather-pybuilder.py'],
         packages = [],
         namespace_packages = [],
         py_modules = [
+            '__init__',
             'core',
             'helpers',
-            'loghelpers'
+            'loghelpers',
+            'subhelpers'
         ],
         classifiers = [
             'Development Status :: 3 - Alpha',
