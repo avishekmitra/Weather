@@ -168,49 +168,49 @@ Using Py builder -> please Py builder reference
 ## Built With
 
 Build using Py builder(build.py stores the build parameters):
------------------------------------------------------------- 
  
-(my_env) <user-domain>:~/environments/Weather$ pyb
-PyBuilder version 0.11.17
-Build started at 2019-02-17 23:28:04
-------------------------------------------------------------
-[INFO]  Building Weather version 1.0
-[INFO]  Executing build in /home/amitra/environments/Weather
-[INFO]  Going to execute task publish
-[INFO]  Running unit tests
-[INFO]  Executing unit tests from Python modules in /home/amitra/environments/Weather/src/unittest/python
-[INFO]  Executed 2 unit tests
-[INFO]  All unit tests passed.
-[INFO]  Building distribution in /home/amitra/environments/Weather/target/dist/Weather-1.0
-[INFO]  Copying scripts to /home/amitra/environments/Weather/target/dist/Weather-1.0/scripts
-[INFO]  Writing setup.py as /home/amitra/environments/Weather/target/dist/Weather-1.0/setup.py
-[INFO]  Collecting coverage information
-[WARN]  coverage_branch_threshold_warn is 0 and branch coverage will not be checked
-[WARN]  coverage_branch_partial_threshold_warn is 0 and partial branch coverage will not be checked
-[INFO]  Running unit tests
-[INFO]  Executing unit tests from Python modules in /home/amitra/environments/Weather/src/unittest/python
-[INFO]  Executed 2 unit tests
-[INFO]  All unit tests passed.
-[WARN]  Module '__init__' was not imported by the covered tests
-[WARN]  Module 'core' was not imported by the covered tests
-[WARN]  Test coverage below 70% for core:  0%
-[WARN]  Test coverage below 70% for helpers: 41%
-[WARN]  Test coverage below 70% for loghelpers:  0%
-[WARN]  Overall coverage is below 70%: 30%
-[INFO]  Overall coverage branch coverage is 25%
-[INFO]  Overall coverage partial branch coverage is 91%
-[INFO]  Building binary distribution in /home/amitra/environments/Weather/target/dist/Weather-1.0
-------------------------------------------------------------
-BUILD SUCCESSFUL
-------------------------------------------------------------
-Build Summary
+ 
+ (my_env) <user-domain>:~/environments/Weather$ pyb
+ PyBuilder version 0.11.17
+ Build started at 2019-02-17 23:28:04
+
+ [INFO]  Building Weather version 1.0
+ [INFO]  Executing build in /home/amitra/environments/Weather
+ [INFO]  Going to execute task publish
+ [INFO]  Running unit tests
+ [INFO]  Executing unit tests from Python modules in /home/amitra/environments/Weather/src/unittest/python
+ [INFO]  Executed 2 unit tests
+ [INFO]  All unit tests passed.
+ [INFO]  Building distribution in /home/amitra/environments/Weather/target/dist/Weather-1.0
+ [INFO]  Copying scripts to /home/amitra/environments/Weather/target/dist/Weather-1.0/scripts
+ [INFO]  Writing setup.py as /home/amitra/environments/Weather/target/dist/Weather-1.0/setup.py
+ [INFO]  Collecting coverage information
+ [WARN]  coverage_branch_threshold_warn is 0 and branch coverage will not be checked
+ [WARN]  coverage_branch_partial_threshold_warn is 0 and partial branch coverage will not be checked
+ [INFO]  Running unit tests
+ [INFO]  Executing unit tests from Python modules in /home/amitra/environments/Weather/src/unittest/python
+ [INFO]  Executed 2 unit tests
+ [INFO]  All unit tests passed.
+ [WARN]  Module '__init__' was not imported by the covered tests
+ [WARN]  Module 'core' was not imported by the covered tests
+ [WARN]  Test coverage below 70% for core:  0%
+ [WARN]  Test coverage below 70% for helpers: 41%
+ [WARN]  Test coverage below 70% for loghelpers:  0%
+ [WARN]  Overall coverage is below 70%: 30%
+ [INFO]  Overall coverage branch coverage is 25%
+ [INFO]  Overall coverage partial branch coverage is 91%
+ [INFO]  Building binary distribution in /home/amitra/environments/Weather/target/dist/Weather-1.0
+ ------------------------------------------------------------
+ BUILD SUCCESSFUL
+ ------------------------------------------------------------
+ Build Summary
              Project: Weather
              Version: 1.0
-      Base directory: /home/amitra/environments/Weather
-        Environments:
-               Tasks: prepare [727 ms] compile_sources [0 ms] run_unit_tests [974 ms] package [144 ms] run_integration_tests [0 ms] verify [2499 ms] publish [2199 ms]
-Build finished at 2019-02-17 23:28:11
-Build took 6 seconds (6641 ms)
+             Base directory: /home/amitra/environments/Weather
+             Environments:
+             Tasks: prepare [727 ms] compile_sources [0 ms] run_unit_tests [974 ms] package [144 ms] run_integration_tests [0 ms] verify [2499 ms] publish [2199 ms]
+             Build finished at 2019-02-17 23:28:11
+             Build took 6 seconds (6641 ms)
 
 ## Versioning
 
