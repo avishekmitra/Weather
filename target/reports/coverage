@@ -2,8 +2,8 @@ Name                   Stmts   Miss Branch BrPart  Cover
 --------------------------------------------------------
 __init__/__init__.py       0      0      0      0   100%
 core.py                   45     45      6      0     0%
-helpers.py                65     38      2      0    40%
+helpers.py                65     33      2      0    48%
 loghelpers.py              7      7      0      0     0%
 subhelpers.py             20      5      4      1    75%
 --------------------------------------------------------
-TOTAL                    137     95     12      1    30%
+TOTAL                    137     90     12      1    34%

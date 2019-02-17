@@ -3,10 +3,10 @@ Running tests...
 ----------------------------------------------------------------------
 ..
 ----------------------------------------------------------------------
-Ran 2 tests in 0.224s
+Ran 2 tests in 1.707s
 
 OK
 
 Generating XML reports...
-Generated XML report: /home/amitra/environments/Weather/target/reports/TEST-helpers_tests.MyTest-20190217232808.xml
-Generated XML report: /home/amitra/environments/Weather/target/reports/TEST-subhelpers_tests.MyTest-20190217232808.xml
+Generated XML report: /home/amitra/environments/Weather/target/reports/TEST-helpers_tests.MyTest-20190218002347.xml
+Generated XML report: /home/amitra/environments/Weather/target/reports/TEST-subhelpers_tests.MyTest-20190218002347.xml

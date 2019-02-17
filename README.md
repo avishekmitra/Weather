@@ -89,7 +89,7 @@ A sample file system directory structure gives an idea about how the file and fo
 ## 4. Output:
           Once the project executed the output file will be created on Weather->src->main->output 
           The outout folder (Weather/src/main/output/ consists:
-          1. weather_data.dat (Final Output depending iterations)
+          1. weather_data.dat (Final output dependent on numer of weather iterations)
           2. weather_data.log (Code execution log)
 
 ### Prerequisites
@@ -105,11 +105,11 @@ This project is capable to process .tif* files to generate random weather data, 
           1. A static 'weather.tif file to be placed in data folder (for this project). 
           2. A static '2018-12-21 UN/LOCODE by Country version 2018-2' file has been created from exporting ms_access db to .txt file.  
 
-          Source files Git location: Weather/src/main/data
+          Data folder Git location: Weather/src/main/data
           UNLOCODE.txt*
           weather.tif*
 
-          *Note: We can use any .tif file which stores weather data but you have to rename it to weather.tif and place to data folder.
+          *Note: You can use any .tif file which stores weather data but you have to rename it to weather.tif and place to data folder.
           you might have to change file permission depending on your env setup. use chmod for unix/linux
 
 
@@ -118,8 +118,8 @@ This project is capable to process .tif* files to generate random weather data, 
 A step by step series of installation to get the dev environment build : 
 
            Steps:
-             1. Install Ubuntu 18.04 on windows 10 (url: )
-             2. Install python 
+             1. Install Ubuntu 18.04 on windows 10
+             2. Install python 3.7
              3. Install pip
              5. Install pylint
              6. Install Py builder (http://pybuilder.github.io/)
@@ -129,44 +129,92 @@ A step by step series of installation to get the dev environment build :
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+Unit test scripts are located at
+/Weather/src/unittest/python
+2 Sample test scripts are present on above directory
 
-### Break down into end to end tests
+                    Testing requirement
 
-Explain what these tests test and why
+            1. Due to some PATH veriable issue implicitly defined src path in unit test scripts
+            -------------------
+            import sys
+            sys.path.append('/home/amitra/environments/Weather/src/main/python')
+            -----------------------
+            2. Special care needed when you will build the project in your local environment.
+            You have to create a data folder inside ~/environments and place your 'weather.tif' file when running pyb build.
 
-```
-Give an example
-```
 
-### And coding style tests
+### Coding style tests
 
 pylint has been used to check coding style ->
 
 Below are the scores : 
-          # Command line : pylint <yourcode.py>
-          #Location(git) -> Weather/src/main/codestandard
+            Command line : pylint <yourcode.py>
+            Location(git) -> Weather/src/main/codestandard
             paylint_score_core_Module (Code standard score for core module)
             paylint_Score_helpers_module (Code standard score for helpers module)
             paylint_Score_loghelpers_module (Code standard score for loghelpers module)
             paylint_Score_subhelpers_module (Code standard score for subhelpers module)
 
-
+  
 ## Deployment
 
- 
+Using Py builder -> please Py builder reference
+(my_env) <user-domain>:~/environments/Weather$ pip install ~/environments/Weather/target/dist/Weather-1.0/dist/Weather-1.0.tar.gz
+
+
+
 
 ## Built With
 
-*  Py builder
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Build using Py builder(build.py stores the build parameters):
+------------------------------------------------------------ 
+ 
+(my_env) <user-domain>:~/environments/Weather$ pyb
+PyBuilder version 0.11.17
+Build started at 2019-02-17 23:28:04
+------------------------------------------------------------
+[INFO]  Building Weather version 1.0
+[INFO]  Executing build in /home/amitra/environments/Weather
+[INFO]  Going to execute task publish
+[INFO]  Running unit tests
+[INFO]  Executing unit tests from Python modules in /home/amitra/environments/Weather/src/unittest/python
+[INFO]  Executed 2 unit tests
+[INFO]  All unit tests passed.
+[INFO]  Building distribution in /home/amitra/environments/Weather/target/dist/Weather-1.0
+[INFO]  Copying scripts to /home/amitra/environments/Weather/target/dist/Weather-1.0/scripts
+[INFO]  Writing setup.py as /home/amitra/environments/Weather/target/dist/Weather-1.0/setup.py
+[INFO]  Collecting coverage information
+[WARN]  coverage_branch_threshold_warn is 0 and branch coverage will not be checked
+[WARN]  coverage_branch_partial_threshold_warn is 0 and partial branch coverage will not be checked
+[INFO]  Running unit tests
+[INFO]  Executing unit tests from Python modules in /home/amitra/environments/Weather/src/unittest/python
+[INFO]  Executed 2 unit tests
+[INFO]  All unit tests passed.
+[WARN]  Module '__init__' was not imported by the covered tests
+[WARN]  Module 'core' was not imported by the covered tests
+[WARN]  Test coverage below 70% for core:  0%
+[WARN]  Test coverage below 70% for helpers: 41%
+[WARN]  Test coverage below 70% for loghelpers:  0%
+[WARN]  Overall coverage is below 70%: 30%
+[INFO]  Overall coverage branch coverage is 25%
+[INFO]  Overall coverage partial branch coverage is 91%
+[INFO]  Building binary distribution in /home/amitra/environments/Weather/target/dist/Weather-1.0
+------------------------------------------------------------
+BUILD SUCCESSFUL
+------------------------------------------------------------
+Build Summary
+             Project: Weather
+             Version: 1.0
+      Base directory: /home/amitra/environments/Weather
+        Environments:
+               Tasks: prepare [727 ms] compile_sources [0 ms] run_unit_tests [974 ms] package [144 ms] run_integration_tests [0 ms] verify [2499 ms] publish [2199 ms]
+Build finished at 2019-02-17 23:28:11
+Build took 6 seconds (6641 ms)
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+See version comments on Git.
 
 ## Authors
 
@@ -174,13 +222,14 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+see the LICENSE.md file for details
 
 ## Acknowledgments
 
 * pyhton community
 * who have had used their brain to generate weather data
-* raster process community
+* pyhton community worked on raster filr process
+* Reference code from same problem statement
 
 
 

@@ -118,7 +118,7 @@
       "branches": 2,
       "branches_missing": 2,
       "branches_partial": 0,
-      "coverage": 41.53846153846154,
+      "coverage": 49.23076923076923,
       "lines": [
         2,
         3,
@@ -187,14 +187,9 @@
         94
       ],
       "lines_not_covered": [
-        25,
-        26,
-        27,
-        28,
         29,
         30,
         31,
-        32,
         43,
         44,
         49,
@@ -228,7 +223,7 @@
       ],
       "module": "helpers",
       "sum_lines": 65,
-      "sum_lines_not_covered": 38
+      "sum_lines_not_covered": 33
     },
     {
       "branches": 0,
@@ -298,5 +293,5 @@
   ],
   "overall_branch_coverage": 25.0,
   "overall_branch_partial_coverage": 91.66666666666667,
-  "overall_coverage": 30.656934306569344
+  "overall_coverage": 34.306569343065696
 }
