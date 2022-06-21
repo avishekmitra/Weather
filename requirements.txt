@@ -13,7 +13,7 @@ geographiclib==1.49
 geopy==1.18.1
 idna==2.8
 mccabe==0.6.1
-numpy==1.16.0
+numpy==1.22.0
 pandas==0.23.4
 pep257==0.7.0
 pkg-resources==0.0.0
@@ -49,7 +49,7 @@ geopy==1.18.1
 idna==2.8
 mccabe==0.6.1
 mock==2.0.0
-numpy==1.16.0
+numpy==1.22.0
 pandas==0.23.4
 pbr==5.1.2
 pep257==0.7.0
